@@ -1,0 +1,47 @@
+[about]
+other = "À propos"
+
+[showcase]
+other = "Réalisations"
+
+[services]
+other = "Services"
+
+[contact]
+other = "Contact"
+
+[years_experience]
+other = "années d'expérience"
+
+[view_portfolio]
+other = "Voir le portfolio"
+
+[contact_me]
+other = "Me contacter"
+
+[skills]
+other = "Compétences"
+
+[software]
+other = "Logiciels"
+
+[clients]
+other = "Clients"
+
+[motion_design]
+other = "Motion design"
+
+[animation_3d]
+other = "Animation 3D"
+
+[video_editing]
+other = "Montage vidéo"
+
+[storyboard]
+other = "Storyboard"
+
+[my_services]
+other = "Mes services"
+
+[all_rights_reserved]
+other = "Tous droits réservés"

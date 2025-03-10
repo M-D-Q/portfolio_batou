@@ -1,0 +1,127 @@
+<section id="showcase" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">{{ i18n "showcase" }}</h2>
+        
+        <div class="row g-4">
+            <!-- BNP Paribas Video -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://player.vimeo.com/video/769964314?h=fd3c22bd1e" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="BNP Paribas | MNPI"></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">BNP Paribas | MNPI</h5>
+                        <p class="card-text small text-muted">
+                            {{ if eq .Site.Language.Lang "fr" }}
+                            Vidéo de formation interne pour la banque BNP Paribas.
+                            {{ else }}
+                            Internal training video for BNP Paribas bank.
+                            {{ end }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modulauto Video -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://player.vimeo.com/video/728543068?h=fd3c22bd1e" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Modulauto | Comment ça marche ?"></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Modulauto | Comment ça marche ?</h5>
+                        <p class="card-text small text-muted">
+                            {{ if eq .Site.Language.Lang "fr" }}
+                            Vidéo explicative pour le service de location de voitures Modulauto.
+                            {{ else }}
+                            Explainer video for the Modulauto car rental service.
+                            {{ end }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AG2R Video -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://player.vimeo.com/video/736139819?h=fd3c22bd1e" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="AG2R | Notre mission"></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">AG2R | Notre mission</h5>
+                        <p class="card-text small text-muted">
+                            {{ if eq .Site.Language.Lang "fr" }}
+                            Vidéo promotionnelle pour le groupe AG2R La Mondiale.
+                            {{ else }}
+                            Promotional video for AG2R La Mondiale group.
+                            {{ end }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Crédit Agricole Video -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://player.vimeo.com/video/736165426?h=fd3c22bd1e" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Crédit Agricole | Le Village"></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Crédit Agricole | Le Village</h5>
+                        <p class="card-text small text-muted">
+                            {{ if eq .Site.Language.Lang "fr" }}
+                            Vidéo réalisée pour le Crédit Agricole de La Réunion.
+                            {{ else }}
+                            Video produced for Crédit Agricole La Réunion.
+                            {{ end }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- E-Formapro Video -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/U_4frPyvRPg" title="E-Formapro : E-learning CACES® R.486" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">E-Formapro : E-learning CACES®</h5>
+                        <p class="card-text small text-muted">
+                            {{ if eq .Site.Language.Lang "fr" }}
+                            Vidéo promotionnelle pour une formation e-learning.
+                            {{ else }}
+                            Promotional video for an e-learning training program.
+                            {{ end }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hol'Autisme Video -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/TLmAqcz2qBc" title="Hol'Autisme : apprentissage avec la réalité mixte" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Hol'Autisme</h5>
+                        <p class="card-text small text-muted">
+                            {{ if eq .Site.Language.Lang "fr" }}
+                            Vidéo pour un projet innovant utilisant la réalité mixte pour l'autisme.
+                            {{ else }}
+                            Video for an innovative project using mixed reality for autism.
+                            {{ end }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="https://vimeo.com/user/" class="btn btn-outline-primary" target="_blank">
+                <i class="bi bi-vimeo me-2"></i>{{ if eq .Site.Language.Lang "fr" }}Voir plus sur Vimeo{{ else }}See more on Vimeo{{ end }}
+            </a>
+        </div>
+    </div>
+</section>

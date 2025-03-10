@@ -1,3 +1,44 @@
-baseURL = 'localhost'
-languageCode = 'fr-FR'
-title = 'Baptiste Bérard - Graphiste & Motion Designer'
+baseURL = "/"
+title = "Baptiste Bérard | Motion Designer"
+theme = ""
+defaultContentLanguage = "fr"
+
+[languages]
+  [languages.fr]
+    languageName = "Français"
+    title = "Baptiste Bérard | Motion Designer"
+    weight = 1
+    contentDir = "content/fr"
+  [languages.en]
+    languageName = "English"
+    title = "Baptiste Bérard | Motion Designer"
+    weight = 2
+    contentDir = "content/en"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    url = "#about"
+    weight = 1
+  [[menu.main]]
+    identifier = "showcase"
+    name = "showcase"
+    url = "#showcase"
+    weight = 2
+  [[menu.main]]
+    identifier = "services"
+    name = "services"
+    url = "#services"
+    weight = 3
+  [[menu.main]]
+    identifier = "contact"
+    name = "contact"
+    url = "#contact"
+    weight = 4
+
+[params]
+  description = "Baptiste Bérard - Motion Designer experienced in 2D/3D animation based in Montpellier, France"
+  email = "contact@baptisteberard.com" # Placeholder email
+  phone = "+33 6 XX XX XX XX" # Placeholder phone
+  maltProfile = "https://www.malt.fr/profile/baptiste-berard" # Placeholder or actual Malt profile

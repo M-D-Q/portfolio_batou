@@ -1,2 +1,43 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<header class="py-3">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="https://placehold.co/80x80?text=BB" alt="Baptiste Bérard Logo" width="50" height="50" class="d-inline-block align-text-top">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">{{ i18n "about" }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#showcase">{{ i18n "showcase" }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">{{ i18n "services" }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">{{ i18n "contact" }}</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ .Site.Language.LanguageName }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            {{ range .Site.Home.AllTranslations }}
+                            <li><a class="dropdown-item{{ if eq $.Site.Language .Language }} active{{ end }}" 
+                                  href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

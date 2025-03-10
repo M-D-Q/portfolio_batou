@@ -1,0 +1,47 @@
+[about]
+other = "About"
+
+[showcase]
+other = "Showcase"
+
+[services]
+other = "Services"
+
+[contact]
+other = "Contact"
+
+[years_experience]
+other = "years of experience"
+
+[view_portfolio]
+other = "View portfolio"
+
+[contact_me]
+other = "Contact me"
+
+[skills]
+other = "Skills"
+
+[software]
+other = "Software"
+
+[clients]
+other = "Clients"
+
+[motion_design]
+other = "Motion design"
+
+[animation_3d]
+other = "3D animation"
+
+[video_editing]
+other = "Video editing"
+
+[storyboard]
+other = "Storyboard"
+
+[my_services]
+other = "My services"
+
+[all_rights_reserved]
+other = "All rights reserved"

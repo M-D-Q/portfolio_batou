@@ -1,1 +1,28 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+<footer class="bg-light py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="https://placehold.co/80x80?text=BB" alt="Baptiste Bérard Logo" width="40" height="40" class="me-2">
+                    <span class="fs-5">Baptiste Bérard</span>
+                </div>
+                <p class="text-muted small">Motion Designer &amp; 3D Animator</p>
+                <p class="text-muted small">SIRET: 881 787 402 00018</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <div class="social-links">
+                    <a href="https://www.malt.fr/profile/baptiste-berard" class="text-decoration-none me-3" target="_blank" aria-label="Malt Profile">
+                        <i class="bi bi-briefcase fs-4"></i>
+                    </a>
+                    <a href="https://vimeo.com/user/" class="text-decoration-none me-3" target="_blank" aria-label="Vimeo Profile">
+                        <i class="bi bi-vimeo fs-4"></i>
+                    </a>
+                    <a href="mailto:{{ .Site.Params.email }}" class="text-decoration-none" aria-label="Email">
+                        <i class="bi bi-envelope fs-4"></i>
+                    </a>
+                </div>
+                <p class="text-muted small mt-3">© {{ now.Format "2006" }} Baptiste Bérard. {{ i18n "all_rights_reserved" }}</p>
+            </div>
+        </div>
+    </div>
+</footer>
