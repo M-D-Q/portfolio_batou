@@ -1,117 +1,73 @@
-<section id="services" class="py-5">
+<section id="services" class="py-4">
     <div class="container">
-        <h2 class="section-title text-center mb-5">{{ i18n "my_services" }}</h2>
+        <h2 class="section-title" data-animation="slide-up">{{ i18n "my_services" }}</h2>
         
         <div class="row g-4">
             <!-- Service 1: Motion Design -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm service-card">
-                    <div class="card-body text-center p-4">
-                        <div class="icon-wrapper mb-4">
-                            <i class="bi bi-film fs-1 text-primary"></i>
-                        </div>
-                        <h3 class="h5 card-title">Motion Design</h3>
-                        <p class="card-text">
-                            {{ if eq .Site.Language.Lang "fr" }}
-                            Animation graphique, habillage vidéo et effets visuels pour donner vie à vos projets.
-                            {{ else }}
-                            Graphic animation, video styling and visual effects to bring your projects to life.
-                            {{ end }}
-                        </p>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-film"></i>
                     </div>
+                    <h3>Motion Design</h3>
+                    <p>
+                        {{ if eq .Site.Language.Lang "fr" }}
+                        Animation graphique et effets visuels
+                        {{ else }}
+                        Graphic animation and visual effects
+                        {{ end }}
+                    </p>
                 </div>
             </div>
             
             <!-- Service 2: 3D Animation -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm service-card">
-                    <div class="card-body text-center p-4">
-                        <div class="icon-wrapper mb-4">
-                            <i class="bi bi-box fs-1 text-primary"></i>
-                        </div>
-                        <h3 class="h5 card-title">{{ i18n "animation_3d" }}</h3>
-                        <p class="card-text">
-                            {{ if eq .Site.Language.Lang "fr" }}
-                            Création et animation d'objets et de scènes en 3D pour des rendus réalistes et immersifs.
-                            {{ else }}
-                            Creation and animation of 3D objects and scenes for realistic and immersive renderings.
-                            {{ end }}
-                        </p>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-box"></i>
                     </div>
+                    <h3>{{ i18n "animation_3d" }}</h3>
+                    <p>
+                        {{ if eq .Site.Language.Lang "fr" }}
+                        Modélisation et rendus 3D immersifs
+                        {{ else }}
+                        3D modeling and immersive renders
+                        {{ end }}
+                    </p>
                 </div>
             </div>
             
             <!-- Service 3: Video Editing -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm service-card">
-                    <div class="card-body text-center p-4">
-                        <div class="icon-wrapper mb-4">
-                            <i class="bi bi-scissors fs-1 text-primary"></i>
-                        </div>
-                        <h3 class="h5 card-title">{{ i18n "video_editing" }}</h3>
-                        <p class="card-text">
-                            {{ if eq .Site.Language.Lang "fr" }}
-                            Montage professionnel, étalonnage et post-production pour des vidéos de qualité.
-                            {{ else }}
-                            Professional editing, color grading and post-production for quality videos.
-                            {{ end }}
-                        </p>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-scissors"></i>
                     </div>
+                    <h3>{{ i18n "video_editing" }}</h3>
+                    <p>
+                        {{ if eq .Site.Language.Lang "fr" }}
+                        Montage professionnel et post-production
+                        {{ else }}
+                        Professional editing and post-production
+                        {{ end }}
+                    </p>
                 </div>
             </div>
             
             <!-- Service 4: Storyboarding -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm service-card">
-                    <div class="card-body text-center p-4">
-                        <div class="icon-wrapper mb-4">
-                            <i class="bi bi-layout-text-window fs-1 text-primary"></i>
-                        </div>
-                        <h3 class="h5 card-title">{{ i18n "storyboard" }}</h3>
-                        <p class="card-text">
-                            {{ if eq .Site.Language.Lang "fr" }}
-                            Conception et création de storyboards pour préparer et visualiser efficacement votre projet.
-                            {{ else }}
-                            Design and creation of storyboards to efficiently prepare and visualize your project.
-                            {{ end }}
-                        </p>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-layout-text-window"></i>
                     </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row mt-5">
-            <div class="col-lg-8 mx-auto">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <h3 class="h5 mb-3 text-center">{{ if eq .Site.Language.Lang "fr" }}Ma méthode de travail{{ else }}My working method{{ end }}</h3>
-                        
-                        <div class="d-flex flex-column flex-md-row justify-content-between workflow-steps">
-                            <div class="workflow-step text-center mb-4 mb-md-0">
-                                <div class="step-number">1</div>
-                                <h4 class="h6 mt-2">{{ if eq .Site.Language.Lang "fr" }}Briefing{{ else }}Briefing{{ end }}</h4>
-                                <p class="small text-muted">{{ if eq .Site.Language.Lang "fr" }}Discussion du projet et des objectifs{{ else }}Project and objectives discussion{{ end }}</p>
-                            </div>
-                            
-                            <div class="workflow-step text-center mb-4 mb-md-0">
-                                <div class="step-number">2</div>
-                                <h4 class="h6 mt-2">{{ if eq .Site.Language.Lang "fr" }}Concept{{ else }}Concept{{ end }}</h4>
-                                <p class="small text-muted">{{ if eq .Site.Language.Lang "fr" }}Storyboard et direction artistique{{ else }}Storyboard and art direction{{ end }}</p>
-                            </div>
-                            
-                            <div class="workflow-step text-center mb-4 mb-md-0">
-                                <div class="step-number">3</div>
-                                <h4 class="h6 mt-2">{{ if eq .Site.Language.Lang "fr" }}Création{{ else }}Creation{{ end }}</h4>
-                                <p class="small text-muted">{{ if eq .Site.Language.Lang "fr" }}Animation et montage vidéo{{ else }}Animation and video editing{{ end }}</p>
-                            </div>
-                            
-                            <div class="workflow-step text-center">
-                                <div class="step-number">4</div>
-                                <h4 class="h6 mt-2">{{ if eq .Site.Language.Lang "fr" }}Livraison{{ else }}Delivery{{ end }}</h4>
-                                <p class="small text-muted">{{ if eq .Site.Language.Lang "fr" }}Révisions et finalisation{{ else }}Revisions and finalization{{ end }}</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>{{ i18n "storyboard" }}</h3>
+                    <p>
+                        {{ if eq .Site.Language.Lang "fr" }}
+                        Conception et script pour vos projets
+                        {{ else }}
+                        Design and script for your projects
+                        {{ end }}
+                    </p>
                 </div>
             </div>
         </div>
