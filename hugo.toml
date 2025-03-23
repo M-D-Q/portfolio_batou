@@ -37,7 +37,7 @@ defaultContentLanguage = "fr"
     weight = 4
 
 [params]
-  description = "Baptiste Bérard - Motion Designer - Montpellier, France"
+  description = "Baptiste Bérard - Motion Designer"
   email = "contact@baptisteberard.com" # Placeholder email
   phone = "+33 6 28 05 75 78"
-  maltProfile = "https://www.malt.fr/profile/baptisteberard" # Placeholder or actual Malt profile
+  maltProfile = "https://www.malt.fr/profile/baptisteberard"
