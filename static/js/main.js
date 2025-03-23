@@ -186,3 +186,84 @@ document.addEventListener('DOMContentLoaded', function() {
         el.classList.add('pulse');
     });
 });
+
+// Client carousel functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Clone items to create smooth infinite scroll
+    const track = document.querySelector('.client-carousel-track');
+    if (track) {
+        const items = track.querySelectorAll('.client-item');
+        
+        // Clone each item and append to create the illusion of infinite scrolling
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            track.appendChild(clone);
+        });
+    }
+    
+    // Handle iframe loading to improve user experience
+    document.querySelectorAll('iframe').forEach(iframe => {
+        // Add loaded class once iframe is loaded
+        iframe.addEventListener('load', function() {
+            this.classList.add('loaded');
+        });
+        
+        // For iframes that might be cached and already loaded
+        if (iframe.complete) {
+            iframe.classList.add('loaded');
+        }
+    });
+});
+
+// Original animations from main.js will go here (omitted for brevity)
+// ...
+
+// Additional function to dynamically adjust the client carousel based on screen size
+function adjustClientCarousel() {
+    const carousel = document.querySelector('.client-carousel-track');
+    if (!carousel) return;
+    
+    const screenWidth = window.innerWidth;
+    const animationDuration = screenWidth < 768 ? '20s' : '30s';
+    
+    carousel.style.animationDuration = animationDuration;
+}
+
+window.addEventListener('resize', adjustClientCarousel);
+adjustClientCarousel(); // Call once on load
+
+
+function openModal(platform, videoId) {
+    const modal = document.getElementById('videoModal');
+    const container = document.getElementById('modalVideoContainer');
+    let src = '';
+  
+    if (platform === 'vimeo') {
+      src = `https://player.vimeo.com/video/${videoId}?autoplay=1&controls=1`;
+    } else if (platform === 'youtube') {
+      src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1&rel=0`;
+    }
+  
+    const iframe = document.createElement('iframe');
+    iframe.src = src;
+    iframe.allow = 'autoplay; fullscreen';
+    iframe.allowFullscreen = true;
+  
+    container.innerHTML = '';
+    container.appendChild(iframe);
+    modal.style.display = 'flex'; // Use flex to center modal
+  }
+  
+  function closeModal() {
+    document.getElementById('videoModal').style.display = 'none';
+    document.getElementById('modalVideoContainer').innerHTML = '';
+  }
+  
+  // Close modal if clicked outside
+  window.addEventListener('click', (e) => {
+    const modal = document.getElementById('videoModal');
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+  

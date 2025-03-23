@@ -1,39 +1,114 @@
 <section class="hero-section py-5">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto text-center hero-content">
+        <!-- FIRST LEVEL: Basic Info + Contact Card -->
+        <div class="row mb-5">
+            <!-- About/Bio Section (Left) -->
+            <div class="col-lg-7 hero-content text-lg-start text-center">
                 <h1>Baptiste Bérard</h1>
                 <h2>Motion Designer & 3D Animator</h2>
                 
-                <div class="skills-list my-4">
+                <div class="skills-list my-4 justify-content-lg-start justify-content-center">
                     <span class="badge bg-light text-dark">Motion Design</span>
                     <span class="badge bg-light text-dark">Animation 3D</span>
                     <span class="badge bg-light text-dark">After Effects</span>
                     <span class="badge bg-light text-dark">Cinema 4D</span>
                 </div>
                 
-                <p class="lead mx-auto my-4" style="max-width: 700px;">
-                    {{ i18n "about_description" }}
+                <p class="lead my-4" style="max-width: 700px;">
+                    {{ if eq .Site.Language.Lang "fr" }}
+                    Motion designer avec 7 années d'expérience, je vous accompagne sur toutes les étapes de votre projet : script, storyboard, illustration, montage, animation et habillage sonore.
+                    {{ else }}
+                    Passionate about animation, I'm a Motion designer with 7 years of experience. I will assist you at every stage of your project: script, storyboard, illustration, editing, animation, and sound design.
+                    {{ end }}
                 </p>
                 
-                <div class="d-flex justify-content-center align-items-center my-4">
-                    <div class="experience-number me-2">7</div>
-                    <span class="text-muted">{{ i18n "years_experience" }}</span>
-                </div>
-                
-                <div class="clients-list my-4">
-                    <div class="text-muted small mb-2">{{ i18n "clients" }}</div>
-                    <div class="d-flex flex-wrap justify-content-center gap-2">
-                        <span class="badge bg-light text-dark">AXA</span>
-                        <span class="badge bg-light text-dark">AG2R La Mondiale</span>
-                        <span class="badge bg-light text-dark">BNP Paribas</span>
-                        <span class="badge bg-light text-dark">Crédit Agricole</span>
+
+            </div>
+            
+            <!-- Contact Section (Right) -->
+            <div class="col-lg-5 mt-5 mt-lg-0">
+                <div class="card border-0 shadow-sm contact-card">
+                    <div class="card-body p-4">
+                        <h3 class="h5 mb-3 text-center">{{ i18n "lets_work_together" }}</h3>
+                        
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="bi bi-geo-alt"></i>
+                                </div>
+                                <div>Montpellier, France</div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+                                <div>
+                                    <a href="mailto:{{ .Site.Params.email }}" class="text-decoration-none">{{ .Site.Params.email }}</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="bi bi-telephone"></i>
+                                </div>
+                                <div>
+                                    <a href="tel:{{ .Site.Params.phone }}" class="text-decoration-none">{{ .Site.Params.phone }}</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="bi bi-briefcase"></i>
+                                </div>
+                                <div>
+                                    <a href="{{ .Site.Params.maltProfile }}" target="_blank" class="text-decoration-none">
+                                        Malt
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="hero-buttons d-flex justify-content-center gap-3 mt-4">
-                    <a href="#showcase" class="btn btn-primary">{{ i18n "view_portfolio" }}</a>
-                    <a href="#contact" class="btn btn-outline-dark">{{ i18n "contact_me" }}</a>
+            </div>
+        </div>
+        
+        <!-- SECOND LEVEL: Client Carousel -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm p-4">
+                    <h3 class="h5 text-center mb-3">{{ i18n "clients" }}</h3>
+                    
+                    <div class="client-carousel-container">
+                        <div class="client-carousel">
+                            <div class="client-carousel-track">
+                                <div class="client-item">
+                                    <img src="/img/AG2R.png" alt="AG2R La Mondiale" class="client-logo">
+                                    <span class="client-name">AG2R La Mondiale</span>
+                                </div>
+                                <div class="client-item">
+                                    <img src="/img/AXA.png" alt="AXA" class="client-logo">
+                                    <span class="client-name">AXA</span>
+                                </div>
+                                <div class="client-item">
+                                    <img src="/img/Crédit_Agricole.png" alt="Crédit Agricole" class="client-logo">
+                                    <span class="client-name">Crédit Agricole</span>
+                                </div>
+                                <div class="client-item">
+                                    <img src="/img/modulauto.png" alt="Modulauto" class="client-logo">
+                                    <span class="client-name">Modulauto</span>
+                                </div>
+                                <div class="client-item">
+                                    <img src="/img/actimage.png" alt="Actimage" class="client-logo">
+                                    <span class="client-name">Actimage</span>
+                                </div>
+                                <div class="client-item">
+                                    <img src="/img/Brigade_Digitale.png" alt="Brigade Digitale" class="client-logo">
+                                    <span class="client-name">Brigade Digitale</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

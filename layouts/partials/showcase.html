@@ -1,121 +1,175 @@
 <section id="showcase" class="py-4 bg-light">
     <div class="container">
-        <h2 class="section-title" data-animation="slide-up">{{ i18n "showcase" }}</h2>
-        
-        <div class="row g-4">
-            <!-- BNP Paribas Video -->
-            <div class="col-md-6 col-lg-4">
-                <div class="showcase-card">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://player.vimeo.com/video/769964314?h=fd3c22bd1e" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="BNP Paribas | MNPI"></iframe>
-                    </div>
-                    <div class="showcase-info">
-                        <h3>BNP Paribas | MNPI</h3>
-                        <p>
-                            {{ if eq .Site.Language.Lang "fr" }}
-                            Vidéo de formation interne
-                            {{ else }}
-                            Internal training video
-                            {{ end }}
-                        </p>
-                    </div>
-                </div>
+      <h2 class="section-title" data-animation="slide-up">{{ i18n "showcase" }}</h2>
+  
+      <div class="row g-4">
+  
+        <!-- BNP Paribas (Vimeo) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="showcase-card">
+            <div class="ratio ratio-16x9 video-wrapper">
+              <iframe
+                src="https://player.vimeo.com/video/769964314?autoplay=1&muted=1&controls=0&title=0&byline=0&portrait=0&dnt=1"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+                title="BNP Paribas">
+              </iframe>
+              <button class="expand-button" onclick="openModal('vimeo', '769964314')">⤢</button>
             </div>
-            
-            <!-- Modulauto Video -->
-            <div class="col-md-6 col-lg-4">
-                <div class="showcase-card">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://player.vimeo.com/video/728543068?h=fd3c22bd1e" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Modulauto | Comment ça marche ?"></iframe>
-                    </div>
-                    <div class="showcase-info">
-                        <h3>Modulauto</h3>
-                        <p>
-                            {{ if eq .Site.Language.Lang "fr" }}
-                            Vidéo explicative
-                            {{ else }}
-                            Explainer video
-                            {{ end }}
-                        </p>
-                    </div>
-                </div>
+            <div class="showcase-info">
+              <h3>BNP Paribas | MNPI</h3>
+              <p>
+                {{ if eq .Site.Language.Lang "fr" }}
+                Vidéo de formation interne
+                {{ else }}
+                Internal training video
+                {{ end }}
+              </p>
             </div>
-            
-            <!-- AG2R Video -->
-            <div class="col-md-6 col-lg-4">
-                <div class="showcase-card">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://player.vimeo.com/video/736139819?h=fd3c22bd1e" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="AG2R | Notre mission"></iframe>
-                    </div>
-                    <div class="showcase-info">
-                        <h3>AG2R | Notre mission</h3>
-                        <p>
-                            {{ if eq .Site.Language.Lang "fr" }}
-                            Vidéo promotionnelle
-                            {{ else }}
-                            Promotional video
-                            {{ end }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Crédit Agricole Video -->
-            <div class="col-md-6 col-lg-4">
-                <div class="showcase-card">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://player.vimeo.com/video/736165426?h=fd3c22bd1e" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Crédit Agricole | Le Village"></iframe>
-                    </div>
-                    <div class="showcase-info">
-                        <h3>Crédit Agricole | Le Village</h3>
-                        <p>
-                            {{ if eq .Site.Language.Lang "fr" }}
-                            Vidéo institutionnelle
-                            {{ else }}
-                            Corporate video
-                            {{ end }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- E-Formapro Video -->
-            <div class="col-md-6 col-lg-4">
-                <div class="showcase-card">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/U_4frPyvRPg" title="E-Formapro : E-learning CACES® R.486" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="showcase-info">
-                        <h3>E-Formapro | E-learning</h3>
-                        <p>
-                            {{ if eq .Site.Language.Lang "fr" }}
-                            Formation interactive
-                            {{ else }}
-                            Interactive training
-                            {{ end }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hol'Autisme Video -->
-            <div class="col-md-6 col-lg-4">
-                <div class="showcase-card">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/TLmAqcz2qBc" title="Hol'Autisme : apprentissage avec la réalité mixte" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="showcase-info">
-                        <h3>Hol'Autisme</h3>
-                        <p>
-                            {{ if eq .Site.Language.Lang "fr" }}
-                            Projet innovant en réalité mixte
-                            {{ else }}
-                            Innovative mixed reality project
-                            {{ end }}
-                        </p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+  
+        <!-- Modulauto (Vimeo) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="showcase-card">
+            <div class="ratio ratio-16x9 video-wrapper">
+              <iframe
+                src="https://player.vimeo.com/video/728543068?autoplay=1&muted=1&controls=0&title=0&byline=0&portrait=0&dnt=1"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+                title="Modulauto">
+              </iframe>
+              <button class="expand-button" onclick="openModal('vimeo', '728543068')">⤢</button>
+            </div>
+            <div class="showcase-info">
+              <h3>Modulauto</h3>
+              <p>
+                {{ if eq .Site.Language.Lang "fr" }}
+                Vidéo explicative
+                {{ else }}
+                Explainer video
+                {{ end }}
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- AG2R (Vimeo) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="showcase-card">
+            <div class="ratio ratio-16x9 video-wrapper">
+              <iframe
+                src="https://player.vimeo.com/video/736139819?autoplay=1&muted=1&controls=0&title=0&byline=0&portrait=0&dnt=1"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+                title="AG2R">
+              </iframe>
+              <button class="expand-button" onclick="openModal('vimeo', '736139819')">⤢</button>
+            </div>
+            <div class="showcase-info">
+              <h3>AG2R | Notre mission</h3>
+              <p>
+                {{ if eq .Site.Language.Lang "fr" }}
+                Vidéo promotionnelle
+                {{ else }}
+                Promotional video
+                {{ end }}
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Crédit Agricole (Vimeo) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="showcase-card">
+            <div class="ratio ratio-16x9 video-wrapper">
+              <iframe
+                src="https://player.vimeo.com/video/736165426?autoplay=1&muted=1&controls=0&title=0&byline=0&portrait=0&dnt=1"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+                title="Crédit Agricole">
+              </iframe>
+              <button class="expand-button" onclick="openModal('vimeo', '736165426')">⤢</button>
+            </div>
+            <div class="showcase-info">
+              <h3>Crédit Agricole | Le Village</h3>
+              <p>
+                {{ if eq .Site.Language.Lang "fr" }}
+                Vidéo institutionnelle
+                {{ else }}
+                Corporate video
+                {{ end }}
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- E-Formapro (YouTube) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="showcase-card">
+            <div class="ratio ratio-16x9 video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/U_4frPyvRPg?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+                title="E-Formapro">
+              </iframe>
+              <button class="expand-button" onclick="openModal('youtube', 'U_4frPyvRPg')">⤢</button>
+            </div>
+            <div class="showcase-info">
+              <h3>E-Formapro | E-learning</h3>
+              <p>
+                {{ if eq .Site.Language.Lang "fr" }}
+                Formation interactive
+                {{ else }}
+                Interactive training
+                {{ end }}
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Hol'Autisme (YouTube) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="showcase-card">
+            <div class="ratio ratio-16x9 video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/TLmAqcz2qBc?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+                title="Hol'Autisme">
+              </iframe>
+              <button class="expand-button" onclick="openModal('youtube', 'TLmAqcz2qBc')">⤢</button>
+            </div>
+            <div class="showcase-info">
+              <h3>Hol'Autisme</h3>
+              <p>
+                {{ if eq .Site.Language.Lang "fr" }}
+                Projet innovant en réalité mixte
+                {{ else }}
+                Innovative mixed reality project
+                {{ end }}
+              </p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
     </div>
-</section>
+  </section>
+  
+  <!-- Video Modal -->
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modalVideoContainer"></div>
+    </div>
+  </div>
+  
+  
